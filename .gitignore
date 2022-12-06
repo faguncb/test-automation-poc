@@ -1,0 +1,84 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+
+@faguncb
+andrewbayd
+/
+playwright-page-object
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+playwright-page-object/.gitignore
+@andrewbayd
+andrewbayd Implement test
+Latest commit d3614d5 on Jul 9, 2021
+ History
+ 1 contributor
+41 lines (32 sloc)  343 Bytes
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+pids
+logs
+results
+tmp
+
+# Build
+public/css/main.css
+
+# Coverage reports
+coverage
+
+# API keys and secrets
+.env
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist/**/*
+
+# ignore yarn.lock
+yarn.lock
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+playwright-page-object/.gitignore at master · andrewbayd/playwright-page-object
