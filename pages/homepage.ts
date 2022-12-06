@@ -9,18 +9,15 @@ export class HomePage {
     }
 
     async open() {
-        await this.page.goto('http://angular.realworld.io/');
+        await this.page.goto('https://demo.dev.arcana.network');
+    }
+
+    async isLoginButtonVisible(): Promise<boolean> {
+        return await isVisible(this.page, 'css=.google-button');
     }
 
     async goToLoginPage() {
-        await this.page.click('a[routerlink="/login"]');
+        await this.page.click('css=.google-button');
     }
 
-    async userIsLoggedIn(): Promise<boolean> {
-        return await isVisible(this.page, 'a[routerlink="/editor"]');
-    }
-
-    async goToSettings() {
-        await this.page.click('a[routerlink="/settings"]');
-    }
 }

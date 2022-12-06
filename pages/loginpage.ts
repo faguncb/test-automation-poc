@@ -1,15 +1,23 @@
-import type { Page } from 'playwright';
+import type { Page, Locator } from 'playwright';
 
 export class LoginPage {
     readonly page: Page;
+    readonly googleLogin: Locator;
+    readonly twitchLogin: Locator;
+    readonly githubLogin: Locator;
+    readonly discordLogin: Locator;
 
-    constructor(page: Page) {
+    constructor(page: Page){
         this.page = page;
+        this.googleLogin = page.getByAltText('google logo');
+        this.twitchLogin = page.getByAltText('twitch logo');
+        this.githubLogin = page.getByAltText('github logo');
+        this.discordLogin = page.getByAltText('discord logo');
     }
 
-    async login(email: string, password: string) {
-        await this.page.type('input[formcontrolname="email"]', email);
-        await this.page.type('input[formcontrolname="password"]', password);
-        await this.page.click('button[type="submit"]');
+    async userGoogleLogin() {
+        await this.googleLogin.click();
+        await this.googleLogin.type('')
+
     }
 }
