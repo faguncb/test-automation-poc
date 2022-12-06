@@ -13,11 +13,11 @@ test('User can login and logout', async ({ page }) => {
     await homepage.goToLoginPage();
     await new LoginPage(page).login(user.email, user.password)
 
-    const userIsLoggedIn = await homepage.userIsLoggedIn();
-    expect(userIsLoggedIn).toBeTruthy();
+    const isLoginButtonVisible = await homepage.isLoginButtonVisible();
+    expect(isLoginButtonVisible).toBeTruthy();
 
-    await homepage.goToSettings();
-    await new SettingsPage(page).logout();
+    const userLoggedIn = await homepage.userLoggedIn();
+    expect(userLoggedIn).toBeTruthy();
 
     const userIsLoggedOut = await new LogoutPage(page).userIsLoggedOut();
     expect(userIsLoggedOut).toBeTruthy();
