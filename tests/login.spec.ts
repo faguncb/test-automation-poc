@@ -11,14 +11,9 @@ test('User can login and logout', async ({ page }) => {
 
     await homepage.open();
     await homepage.goToLoginPage();
-    await new LoginPage(page).login(user.email, user.password)
+    await new LoginPage(page).userGoogleLogin(user.email, user.password);
 
     const isLoginButtonVisible = await homepage.isLoginButtonVisible();
     expect(isLoginButtonVisible).toBeTruthy();
 
-    const userLoggedIn = await homepage.userLoggedIn();
-    expect(userLoggedIn).toBeTruthy();
-
-    const userIsLoggedOut = await new LogoutPage(page).userIsLoggedOut();
-    expect(userIsLoggedOut).toBeTruthy();
 });
