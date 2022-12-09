@@ -23,7 +23,7 @@ export class LoginPage {
 
     async userGoogleLogin(email:string, password:string) {
         await this.googleLogin.click();
-        await expect(this.googlePage).toBeVisible();
+        await expect(this.googlePage).toBeVisible({ timeout: 5000});
         await this.googlePage.locator('#email').fill(email);
         await this.googlePage.getByText('Next').click();
         await this.googlePage.locator('#password').fill(password);
