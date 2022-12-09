@@ -2,7 +2,7 @@ import { PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
     // Timeout
-    timeout: 10000,
+    timeout: 20000,
 
     use: {
         // Browser options
@@ -19,11 +19,12 @@ const config: PlaywrightTestConfig = {
         {
             name: 'Chrome',
             use: { browserName: 'chromium' },
-        },
-        {
-            name: 'WebKit',
-            use: { browserName: 'webkit' },
-        },
+        }
+
+        // {
+        //     name: 'WebKit',
+        //     use: { browserName: 'webkit' },
+        // },
     ],
 };
 
